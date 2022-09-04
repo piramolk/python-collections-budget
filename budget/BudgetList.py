@@ -19,6 +19,17 @@ class BudgetList:
     def __len__(self):
         return len(self.expenses) + len(self.overages)
 
+    def __iter__(self):
+        iter(self.expenses)
+        self.iter_o = iter(self.overages)
+        return self
+
+    def __next__(self):
+        try:
+            return self.iter_e.__next__()
+        except:
+            raise Exception(StopIteration)
+            return self.iter_o.__next__()
 
 def main():
     myBudgetList = BudgetList(1200)
