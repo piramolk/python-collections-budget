@@ -20,7 +20,7 @@ class BudgetList:
         return len(self.expenses) + len(self.overages)
 
     def __iter__(self):
-        iter(self.expenses)
+        self.iter_e =iter(self.expenses)
         self.iter_o = iter(self.overages)
         return self
 
@@ -28,7 +28,7 @@ class BudgetList:
         try:
             return self.iter_e.__next__()
         except:
-            raise Exception(StopIteration)
+            raise Exception("StopIteration as stop")
             return self.iter_o.__next__()
 
 def main():
