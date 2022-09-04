@@ -1,4 +1,4 @@
-from budget import Expense
+import Expense
 
 class BudgetList:
     def __init__(self,budget):
@@ -30,3 +30,5 @@ def main():
     print('The count of all expenses: ' + str(len(myBudgetList))) 
 
 
+if(__name__ == "__main__"):
+    main()
