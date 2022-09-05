@@ -43,10 +43,10 @@ class Expenses():
 
     def categorize_set_comprehension(self):
         necessary_expenses = {x for x in self.list
-        if x.category in ['Phone', 'Auto and Gas', 'Utilities', 'Mortgage']}
+        if x.category in ['Phone', 'Auto and Gas', 'Classes', 'Utilities', 'Mortgage']}
         
         food_expenses = {x for x in self.list 
-        if x.category in ['Groceries', 'Eating Out']}
+        if x.category == ('Groceries'| 'Eating Out')}
         
         unnecessary_expenses = set(self.list).difference(food_expenses).difference(food_expenses)
 
