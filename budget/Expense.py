@@ -48,6 +48,6 @@ class Expenses():
         food_expenses = {x for x in self.list 
         if x.category in ['Groceries', 'Eating Out']}
         
-        unnecessary_expenses = set(self.list).difference(food_expenses).difference(food_expense)
+        unnecessary_expenses = set(self.list).difference(food_expenses).difference(food_expenses)
 
         return [necessary_expenses, food_expenses, unnecessary_expenses]
