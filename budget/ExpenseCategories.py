@@ -1,4 +1,4 @@
-from . import Expense
+from budget import Expense
 import matplotlib.pyplot as plt
 import timeit
 
@@ -41,6 +41,7 @@ def main():
         ax.pie(divided_expenses_sum, labels = labels , autopct = '%1.1f%%') 
 
         plt.show()
+        
 
 if __name__ == "__main__":
     main()
